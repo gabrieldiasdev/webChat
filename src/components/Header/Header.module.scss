@@ -1,0 +1,86 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .topContent {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 14px;
+
+        @media screen and (max-width: 375px) {
+            margin-bottom: 26px;
+        }
+
+        .userInfos {
+            display: flex;
+            align-items: center;
+
+            .userImageBox {
+                margin-right: 16px;
+                border-radius: 50%;
+                width: 48px;
+                height: 48px;
+                overflow: hidden;
+
+                .userImage {
+                    object-fit: cover;
+                }
+            }
+
+            .userInfoTextBox {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                h2 {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #E1E1E6;
+                    margin-bottom: 4px;
+                }
+
+                .statusContainer {
+                    display: flex;
+                    align-items: center;
+
+                    .statusDot {
+                        margin-right: 4px;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: #000000;
+                    }
+
+                    p {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+                }
+            }
+        }
+
+        .closeChat {
+            cursor: pointer;
+            transition: .5s transform;
+
+            &:hover {
+                transform: scale(1.2);
+                color: #FFFFFF;
+            }
+        }
+    }
+    
+    .bottomContentp {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        color: #E1E1E6;
+    }
+}
