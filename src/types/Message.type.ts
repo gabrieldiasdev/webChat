@@ -1,6 +1,6 @@
 export type Message = {
     sentDate: string;
     text: string;
-    sent?: boolean;
+    sent: boolean;
     messageAuthor?: string;
 }
