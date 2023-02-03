@@ -5,6 +5,7 @@
 Repositório criado para armazenar o Desafio 04 #BoraCodar proposto pela comunidade Rocketseat.
 
 ## 💻  Projeto desenvolvido
+**<a href="https://web-chat-gabrieldiasdev.vercel.app/" target="_blank" style="color: #633BBC;">Acesse o projeto</a>**
 
 <img src="./.github/Capa.png" />
 
