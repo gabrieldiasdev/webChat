@@ -1,5 +1,5 @@
 import styles from './Header.module.scss';
-import userPicture from '../../../public/images/userPicture.png';
+import botPicture from '../../../public/images/botPicture.png';
 import Image from 'next/image';
 import { X } from 'phosphor-react';
 import { useRouter } from 'next/router';
@@ -21,8 +21,8 @@ export default function Header({ status, lastSeen }: HeaderProps) {
                 <div className={styles.userInfos}>
                     <div className={styles.userImageBox}>
                         <Image
-                            src={userPicture}
-                            alt='User Picture'
+                            src={botPicture}
+                            alt='Bot Picture'
                             className={styles.userImage}
                         />
                     </div>
@@ -41,7 +41,7 @@ export default function Header({ status, lastSeen }: HeaderProps) {
                         </div>
                     </div>
                 </div>
-                <div 
+                <div
                     className={styles.closeChat}
                     onClick={() => router.reload()}
                 >

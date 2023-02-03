@@ -25,9 +25,12 @@
                 width: 48px;
                 height: 48px;
                 overflow: hidden;
+                background-color: #FFFFFF;
 
                 .userImage {
                     object-fit: cover;
+                    max-height:100%; 
+                    max-width:100%;
                 }
             }
 
