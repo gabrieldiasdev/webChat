@@ -11,7 +11,7 @@ import { useState } from "react";
 export default function Home(data: Props) {
     const [newMessages, setNewMessages] = useState<Message[]>(data.messages);
     
-    function handleSendNewMessage(message: Message) {
+    function sendMessage(message: Message) {
         setNewMessages([...newMessages, message]);
     }
 
@@ -26,11 +26,11 @@ export default function Home(data: Props) {
                     status="online"
                     lastSeen={new Date()}
                 />
-                <Chat 
+                <Chat
                     messages={newMessages}
                 />
                 <ChatInput
-                    handleSendMessage={handleSendNewMessage} 
+                    sendMessage={sendMessage}
                 />
             </div>
         </>
