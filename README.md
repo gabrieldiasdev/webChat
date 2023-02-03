@@ -11,7 +11,7 @@ Repositório criado para armazenar o Desafio 04 #BoraCodar proposto pela comunid
 ## 💡  Info
 
 
-O app contém um chat sofisticado com interface moderna e responsiva perfeito para você conversar com seus amigos!
+O app contém um chat sofisticado com interface moderna e responsiva perfeito para você conversar com uma IA pronta para responder suas perguntas !
 
 ## 💻 Tecnologias/Pacotes utilizados
 
@@ -21,6 +21,10 @@ O app contém um chat sofisticado com interface moderna e responsiva perfeito pa
 - NextJs
 - Sass
 - PhosphorReact
+
+**Backend**
+- OpenAI
+- EventSourceParser
 
 
 ## 👨‍💻 Autor
