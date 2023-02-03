@@ -88,7 +88,7 @@ export default function Home(data: Props) {
     return (
         <>
             <Head>
-                <title>Home | bc.chat</title>
+                <title>Web Chat</title>
             </Head>
 
             <div className={styles.container}>
