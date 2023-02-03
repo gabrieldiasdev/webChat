@@ -4,40 +4,27 @@ import { ChangeEvent, KeyboardEvent, useState } from 'react';
 import { Message } from '@/types/Message.type';
 
 interface ChatInputProps {
-    handleSendMessage: (message: Message) => void;
+    sendMessage: (message: Message) => void;
 }
 
-export default function ChatInput({ handleSendMessage }: ChatInputProps) {
+export default function ChatInput({ sendMessage }: ChatInputProps) {
     const [message, setMessage] = useState('');
 
     function handleMessageChange(e: ChangeEvent<HTMLInputElement>) {
         setMessage(e.target.value);
     };
 
-    function handleKeyPress(e: KeyboardEvent<HTMLInputElement>) {
-        if(e.key === 'Enter') {
-            if(message.length < 1) {
-                return;
-            };
-
-            handleSendMessage({
-                text: message,
-                sentDate: new Date().toISOString(),
-                sent: true,
-            });
-        };
-    };
-
-    function handleSendClick() {
+    function handleSendMessage() {
         if(message.length < 1) {
             return;
         };
 
-        handleSendMessage({
+        sendMessage({
             text: message,
             sentDate: new Date().toISOString(),
             sent: true,
         });
+        setMessage('');
     };
     
     return (
@@ -45,15 +32,16 @@ export default function ChatInput({ handleSendMessage }: ChatInputProps) {
             <input 
                 type="text" 
                 placeholder='Digite sua mensagem'
+                value={message}
                 onChange={(e) => handleMessageChange(e)}
-                onKeyUp={(e) => handleKeyPress(e)} 
+                onKeyUp={(e) => e.key === 'Enter' && handleSendMessage()} 
             />
             <PaperPlaneRight
                 size={24} 
                 color="#E1E1E6" 
                 weight="fill" 
                 className={styles.inputButton}
-                onClick={handleSendClick}
+                onClick={handleSendMessage}
             />
         </div>
     );
